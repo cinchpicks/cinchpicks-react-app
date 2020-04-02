@@ -10,7 +10,7 @@ const Hero = () => ( <
     alt = "React logo"
     width = "120" / >
     <
-    h1 className = "mb-4" > Future home of Cinchpick < /h1>
+    h1 className = "mb-4" > Future home of Cinchpicks < /h1>
 
     <
     p className = "lead" >
