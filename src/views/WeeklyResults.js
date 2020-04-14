@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-
 import { useAuth0 } from "../react-auth0-spa";
+import GetGames from "../components/GetGames";
 
 
 const WeeklyResults = () => {
@@ -9,7 +9,7 @@ const WeeklyResults = () => {
   return (
     <Fragment>
       {isAuthenticated && (
-        <div>Weekly Results</div>
+        <GetGames />
       )}
       <hr />
     </Fragment>

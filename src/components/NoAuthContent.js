@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 
-import { Row, Col } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import contentData from "../utils/contentData";
 
 class NoAuthContent extends Component {
   render() {
