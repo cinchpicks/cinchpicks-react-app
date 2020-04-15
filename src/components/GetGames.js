@@ -18,6 +18,7 @@ function GetGames() {
 
   return (
     <div>
+        <p>Upcoming Games</p>
       {data.data.map(item => (
         <div>
             {item.home_team === item.teams[0] && (
