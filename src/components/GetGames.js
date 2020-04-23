@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function GetGames() {
-  const [data, setData] = useState({ data: [] });
 
+  const [data, setData] = useState({ data: [] });
 
   useEffect(() => {
     const fetchData = async () => {

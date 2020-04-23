@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Can from "../components/Can";
 
 import {
   Collapse,
@@ -48,7 +49,10 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </NavItem>
-              {isAuthenticated && (
+              <Can
+                role={user.role}
+                perform="weekly-results:view"
+                yes={() => (
                 <NavItem>
                   <NavLink
                     tag={RouterNavLink}
@@ -60,6 +64,25 @@ const NavBar = () => {
                   </NavLink>
                 </NavItem>
               )}
+                no={() => ""}
+              />
+              <Can
+                role={user.role}
+                perform="admin:edit"
+                yes={() => (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/Admin"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Admin
+                  </NavLink>
+                </NavItem>
+              )}
+              no={() => ""}
+            />
             </Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (

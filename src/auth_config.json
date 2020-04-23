@@ -1,4 +1,5 @@
 {
   "domain": "cinchpicks.auth0.com",
-  "clientId": "4haXtOIXZblWYWSiAft1u64035M0kgKh"
+  "clientId": "4haXtOIXZblWYWSiAft1u64035M0kgKh",
+  "roleUrl": "https://cinchpicks/role"
 }

@@ -3,29 +3,39 @@ import React, { Fragment } from "react";
 import Hero from "../components/Hero";
 import Dashboard from "../components/Dashboard";
 import NoAuthContent from "../components/NoAuthContent";
-import AuthContent from "../components/AuthContent";
 import { useAuth0 } from "../react-auth0-spa";
-
+import Can from "../components/Can";
 
 
 const Home = () => {
-  const { isAuthenticated } = useAuth0();
+
+  const {user } = useAuth0();
 
   return (
     <Fragment>
-      {!isAuthenticated && (
-        <Hero />
+      <div>User Role: {user.role}</div>
+
+      <Can
+        role={user.role}
+        perform="auth-home-page:visit"
+        yes={() => (
+          <Dashboard />
       )}
-      {isAuthenticated && (
-        <Dashboard />
+        no={() => ""}
+      />
+
+      <Can
+        role={user.role}
+        perform="no-auth-home-page:visit"
+        yes={() => (
+        <Fragment>
+          <Hero />
+          <NoAuthContent />
+        </Fragment>
       )}
-      <hr />
-      {!isAuthenticated && (
-        <NoAuthContent />
-      )}
-      {isAuthenticated && (
-        <AuthContent />
-      )}
+        no={() => ""}
+      />
+
     </Fragment>
   );
 };

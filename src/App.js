@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Home from "./views/Home";
 import WeeklyResults from "./views/WeeklyResults";
 import Profile from "./views/Profile";
+import Admin from "./views/admin/Admin";
 import { useAuth0 } from "./react-auth0-spa";
 import history from "./utils/history";
 
@@ -34,6 +35,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/WeeklyResults" exact component={WeeklyResults} />
+            <Route path="/Admin" exact component={Admin} />
             <PrivateRoute path="/profile" component={Profile} />
           </Switch>
         </Container>
