@@ -16,7 +16,7 @@
     "aws-amplify": "^2.3.0",
     "aws-amplify-react": "^3.1.9",
     "axios": "^0.19.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "highlight.js": "^9.15.6",
     "morgan": "^1.9.1",
     "react": "^16.8.6",
